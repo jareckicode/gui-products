@@ -1,0 +1,70 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+:root {
+  --gutter: 20px; }
+
+.wp-block-cgb-block-products {
+  color: #292929;
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  -ms-flex-line-pack: start;
+      align-content: start; }
+  .wp-block-cgb-block-products > * {
+    grid-column: 1 / -1; }
+  .wp-block-cgb-block-products .products-list {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: 10px;
+    grid-template-rows: minmax(150px, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: calc(40% - var(--gutter) * 2);
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x proximity;
+        scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+    padding-left: 0; }
+    @media only screen and (max-width: 652px) {
+      .wp-block-cgb-block-products .products-list {
+        grid-auto-columns: calc(88% - var(--gutter) * 2);
+        margin-left: -2rem; } }
+    .wp-block-cgb-block-products .products-list::before, .wp-block-cgb-block-products .products-list::after {
+      content: '';
+      width: 10px; }
+    .wp-block-cgb-block-products .products-list .products-list__item {
+      scroll-snap-align: center;
+      list-style: none;
+      margin: 0 1rem;
+      background-color: #fff; }
+      .wp-block-cgb-block-products .products-list .products-list__item img {
+        height: 400px;
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+      .wp-block-cgb-block-products .products-list .products-list__item a {
+        color: #161B1F;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 15px;
+        padding: .75rem .5rem;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+        .wp-block-cgb-block-products .products-list .products-list__item a span svg {
+          height: 24px; }
+      .wp-block-cgb-block-products .products-list .products-list__item:hover {
+        cursor: move; }

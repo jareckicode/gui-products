@@ -1,0 +1,17 @@
+{
+  "name": "products-cgb-guten-block",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cgb-scripts start",
+    "build": "cgb-scripts build",
+    "eject": "cgb-scripts eject",
+    "wp-env": "wp-env"
+  },
+  "dependencies": {
+    "cgb-scripts": "1.23.1"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^4.0.4"
+  }
+}
